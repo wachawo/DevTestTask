@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Usage: python app1.py -n 1000000
+Usage: python3 app1.py -n 1000000
 """
 import argparse
 import random
