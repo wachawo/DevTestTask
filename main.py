@@ -11,8 +11,8 @@ from datetime import datetime, timedelta
 
 CAMPAIGNS = [1000, 2000, 3000, 4000, 5000, 9000]
 AGENTS = [f'agent{i:04d}' for i in range(1, 1001)]
-STATUSES = ['SALE', 'CCSALE', 'DNC', 'NI', 'BUSY']
-SALE_STATUSES = ['SALE', 'CCSALE']
+STATUSES = ['CREDIT', 'SALE', 'DNC', 'NI', 'BUSY']
+SALE_STATUSES = ['CREDIT', 'SALE']
 
 def gen_schedule(agents, days):
     schedule = {}
