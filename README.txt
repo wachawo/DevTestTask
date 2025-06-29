@@ -40,8 +40,8 @@ CALLTIME            AGENT       CAMPAIGN    STATUS   AMOUNT
 2025-05-12 18:20:27 agent0931   2000        SALE      20
 ...
 2025-05-16 12:06:43 agent0095   1000        DNC
-2025-05-16 16:01:02 agent0941   5000        CCSALE    60
-2025-05-16 10:27:45 agent0735   9000        CCSALE    50
+2025-05-16 16:01:02 agent0941   5000        SALE      60
+2025-05-16 10:27:45 agent0735   9000        SALE      50
 2025-05-16 19:53:15 agent0545   2000        DNC
 2025-05-16 20:50:38 agent0257   2000        DNC
 
