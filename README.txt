@@ -1,46 +1,48 @@
-Тестовое задание:
+Test Task:
 
-При помощи скрипта сгенерируйте CSV-файл с данными об обработке обращений сотрудниками компании.
+Using a script, generate a CSV file with data on how company employees handle incoming requests:
 python3 ./main.py -n 1000000
 
-В файле присутствуют следующие поля:
+The file contains the following fields:
 
-* CALLTIME — дата и время обращения
-* AGENT — имя сотрудника
-* CAMPAIGN — проект
-* STATUS — статус обращения, SALE и CCSALE — успешные продажи, остальные статусы — неуспешные
-* AMOUNT — сумма продажи
+CALLTIME — date and time of the request
+AGENT — employee name
+CAMPAIGN — project
+STATUS — status of the request; SALE and CCSALE are successful sales, all other statuses are considered unsuccessful
+AMOUNT — sale amount
 
-Необходимо разработать скрипт, который классифицирует сотрудников по производительности в разрезе каждого рабочего дня.
-Скрипт должен быть способен обрабатывать файлы объёмом ~500 миллионов строк на сервере с 8 ГБ ОЗУ.
-Язык программирования и используемые библиотеки — на ваше усмотрение.
-Под производительностью подразумевается:
-Сумма и количество успешных продаж в расчёте на час работы.
+You need to develop a script that classifies employees by productivity for each workday.
+The script should be able to handle files with around 500 million rows on a server with 8 GB of RAM.
+You can choose any programming language and libraries.
 
-1. Необходимо вычислить среднюю производительность проектов за каждый день.
-2. Необходимо определить лучших сотрудников по производительности по каждому проекту за каждый день.
-3. Необходимо определить 20% сотрудников с наименьшей производительностью за каждый день.
+Productivity is defined as:
+The total amount and number of successful sales per hour worked.
 
-Дополнительные требования:
+Tasks:
 
-* Учитывайте только успешные обращения (например, STATUS в ['SALE', 'CCSALE']) при расчёте производительности.
-* Время работы сотрудника считается с первого обращения до последнего в течение дня.
-* Результат должен быть оформлен в виде ссылки на публичный Git-репозиторий.
+1. Calculate the average productivity for each project per day.
+2. Identify the top-performing employees by productivity for each project per day.
+3. Determine the bottom 20% of employees by productivity for each day (regardless of project).
 
-CALLTIME AGENT CAMPAIGN STATUS AMOUNT
-2025-05-12 19:25:09  agent0175      3000     DNC
-2025-05-12 15:44:55  agent0514      5000    BUSY
-2025-05-12 10:14:16  agent0915      2000    BUSY
-2025-05-12 20:41:15  agent0591      2000      NI
-2025-05-12 18:20:27  agent0931      2000    SALE     20
-         ...        ...       ...     ...    ...    ....
-2025-05-16 12:06:43  agent0095      1000     DNC
-2025-05-16 16:01:02  agent0941      5000  CCSALE     60
-2025-05-16 10:27:45  agent0735      9000  CCSALE     50
-2025-05-16 19:53:15  agent0545      2000     DNC
-2025-05-16 20:50:38  agent0257      2000     DNC
-[1000000 rows x 5 columns]
+Additional Requirements:
 
+* Only consider successful requests (STATUS in ['SALE', 'CCSALE']) when calculating productivity.
+* An employee’s working time is the time between their first and last call on a given day.
+* The result must be shared as a link to a public Git repository.
 
+Sample CSV format:
 
+CALLTIME            AGENT       CAMPAIGN    STATUS   AMOUNT
+2025-05-12 19:25:09 agent0175   3000        DNC
+2025-05-12 15:44:55 agent0514   5000        BUSY
+2025-05-12 10:14:16 agent0915   2000        BUSY
+2025-05-12 20:41:15 agent0591   2000        NI
+2025-05-12 18:20:27 agent0931   2000        SALE      20
+...
+2025-05-16 12:06:43 agent0095   1000        DNC
+2025-05-16 16:01:02 agent0941   5000        CCSALE    60
+2025-05-16 10:27:45 agent0735   9000        CCSALE    50
+2025-05-16 19:53:15 agent0545   2000        DNC
+2025-05-16 20:50:38 agent0257   2000        DNC
 
+[1000000 rows × 5 columns]
