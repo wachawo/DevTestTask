@@ -26,7 +26,7 @@ Tasks:
 
 Additional Requirements:
 
-* Only consider successful requests (STATUS in ['SALE', 'CCSALE']) when calculating productivity.
+* Only consider successful requests (STATUS in ['SALE', 'CREDIT']) when calculating productivity.
 * An employee’s working time is the time between their first and last call on a given day.
 * The result must be shared as a link to a public Git repository.
 
