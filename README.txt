@@ -1,4 +1,4 @@
-Test Task:
+Test Task for Python Developer:
 
 Using a script, generate a CSV file with data on how company employees handle incoming requests:
 python3 ./main.py -n 1000000
